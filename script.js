@@ -8,7 +8,7 @@ const humanChoiceEl = document.getElementById("human-choice");
 const computerChoiceEl = document.getElementById("computer-choice");
 document.getElementById("reset").addEventListener("click", resetGame);
 
-// Event Listener
+
 document.getElementById("rock").addEventListener("click", () => {
     playRound("rock");
 });
@@ -21,17 +21,17 @@ document.getElementById("scissors").addEventListener("click", () => {
     playRound("scissors");
 });
 
-// Komputer memilih secara acak
+
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
-// Main game
+
 function playRound(humanChoice) {
 
-    // Kalau game sudah selesai, jangan lanjut
+    
     if (humanScore === 5 || computerScore === 5) {
         return;
     }
