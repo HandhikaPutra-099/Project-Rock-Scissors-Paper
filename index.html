@@ -4,8 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project JS Basic</title>
+    <style>
+        body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    background:#1f2937;
+    color:white;
+    font-family:Poppins;
+    }
+    .choices{
+    display:flex;
+    gap:20px;
+    }
+    button{
+    padding:20px 30px;
+    font-size:24px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+    background:#facc15;
+    color:black;
+    }
+    button:hover{
+    transform:scale(1.1);
+    background:#f59e0b;
+    }
+    .scoreboard{
+    display:flex;
+    gap:80px;
+    margin-top:30px;
+    }
+    .win{
+    color:limegreen;
+    }
+    .lose{
+    color:red;
+    }
+    .tie{
+    color:gold;
+    }
+    .reset{
+        margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    background:#3b82f6;
+    color:white;
+    transition:.3s;
+    background:#2563eb;
+    transform:scale(1.05);
+    }
+
+    </style>
 </head>
 <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="choices">
+        <button id="rock">🪨 Rock</button>
+        <button id="paper">📄 Paper</button>
+        <button id="scissors">✂️ Scissors</button>
+    </div>
+
+    <div class="result">
+        <p id="human-choice"></p>
+        <p id="computer-choice"></p>
+        <h2 id="winner"></h2>
+    </div>
+
+    <div class="scoreboard">
+        <p>You: <span id="human-score">0</span></p>
+        <p>Computer: <span id="computer-score">0</span></p>
+    </div>
+
+<button id="reset">🔄 Play Again</button>
     <script src="script.js"></script>
 </body>
 </html>
